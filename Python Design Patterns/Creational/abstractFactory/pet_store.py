@@ -3,4 +3,4 @@ class PetStore:
         self._pet_factory = pet_factory
 
     def show(self):
-        return self._pet_factory.get_pet(self).speak() + " " + self._pet_factory.get_food(self).taste()
+        return self._pet_factory.get_pet().speak() + " " + self._pet_factory.get_food().taste()
