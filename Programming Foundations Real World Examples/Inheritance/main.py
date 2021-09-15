@@ -1,16 +1,13 @@
-# This is a sample Python script.
+from pprint import pprint
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    my_tuple = ('a', 34, 'ff')
+    print(my_tuple)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    my_list = ['a', 34, 'ff']
+    print(my_list)
+
+    print('\n Dif my_list  - my_tuple')
+    pprint(list(set(dir(my_list)) - set(dir(my_tuple))))
+    print('\n Dif my_tuple - my_list')
+    pprint(list(set(dir(my_tuple)) - set(dir(my_list))))
