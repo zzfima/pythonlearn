@@ -1,6 +1,18 @@
 import queue
 from pprint import pprint
 
+
+class Stack:
+    def __init__(self):
+        self._s = list()
+
+    def push(self, v):
+        self._s.append(v)
+
+    def pop(self):
+        return  self._s.pop()
+
+
 if __name__ == '__main__':
     my_tuple = ('a', 34, 'ff')
     print(my_tuple)
@@ -35,3 +47,14 @@ if __name__ == '__main__':
         q.put('ae', block=False)
     except queue.Full:
         print("An exception occurred because of full queue try add object")
+
+    s = Stack()
+    s.push('k2')
+    s.push('kb')
+    s.push('kc')
+    s.push('k1')
+
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
