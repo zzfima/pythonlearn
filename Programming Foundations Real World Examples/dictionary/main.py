@@ -14,8 +14,9 @@ if __name__ == '__main__':
     sha256_2.update(b'Hello world')
     print(sha256_2.hexdigest())
 
-    with open(r"C:\Users\zzfim\Downloads\python-3.9.7-amd64.exe", "rb") as file:
+    with open(r".\venv\Scripts\python.exe", "rb") as file:
         md5 = hashlib.md5()
         for chunk in iter(lambda: file.read(1024), b""):
             md5.update(chunk)
-        print(md5.hexdigest())
+        print(
+            f'{md5.hexdigest()} is same as d59663b8d5f110f55ec5507c8dfdcc82? ')
