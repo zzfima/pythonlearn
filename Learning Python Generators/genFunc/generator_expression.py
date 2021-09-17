@@ -22,3 +22,9 @@ if __name__ == '__main__':
 
     col5 = (i[::-1] for i in (i.upper() for i in collection))
     print(list(col5))
+
+    col5 = (i[::-1] for i in (i.upper() for i in collection))
+    print(col5.__next__())
+    print(col5.__next__())
+    print(col5.__next__())
+    print(col5.__next__())
