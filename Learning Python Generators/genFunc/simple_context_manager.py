@@ -5,11 +5,11 @@ from contextlib import contextmanager
 def simple_cm(n):
     try:
         print(f'setup {n}')
-        yield
+        yield n + 1
     finally:
         print(f'wrap up {n}')
 
 
 if __name__ == '__main__':
     with simple_cm(10) as n:
-        print('do job')
+        print(f'do job {n}')
