@@ -28,3 +28,6 @@ if __name__ == '__main__':
     print(col5.__next__())
     print(col5.__next__())
     print(col5.__next__())
+
+    for i in (i for i in range(11) if i % 3 == 0):
+        print(i)
