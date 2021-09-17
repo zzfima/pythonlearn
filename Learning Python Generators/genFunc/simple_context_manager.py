@@ -12,4 +12,4 @@ def simple_cm(n):
 
 if __name__ == '__main__':
     with simple_cm(10) as n:
-        pass
+        print('do job')
