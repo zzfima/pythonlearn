@@ -1,16 +1,28 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import asyncio
+import time
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+async def my_func():
+    await fff()
 
 
-# Press the green button in the gutter to run the script.
+async def fff():
+    await kkk()
+
+
+async def kkk():
+    ggg()
+
+
+def ggg():
+    time.sleep(5)
+    print("work")
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print("hello")
+    loop = asyncio.get_event_loop()
+    asyncio.ensure_future(my_func())
+    loop.run_forever()
+    loop.close()
+    print("bye")
