@@ -12,8 +12,11 @@ async def sleep_and_print(seconds):
 
 
 async def main():
-    # print([await sleep_and_print(3), await sleep_and_print(6)])
-    results = await asyncio.gather(sleep_and_print(3), sleep_and_print(6))
+    results = await asyncio.gather(
+        sleep_and_print(3),
+        sleep_and_print(4),
+        sleep_and_print(5),
+        sleep_and_print(6))
     print(results)
 
 
