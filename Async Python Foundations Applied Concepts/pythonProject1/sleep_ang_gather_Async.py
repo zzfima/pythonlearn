@@ -12,11 +12,16 @@ async def sleep_and_print(seconds):
 
 
 async def main():
-    results = await asyncio.gather(
-        sleep_and_print(3),
-        sleep_and_print(4),
-        sleep_and_print(5),
-        sleep_and_print(6))
+    coroutines_list = []
+    for i in range(3, 7):
+        coroutines_list.append(sleep_and_print(i))
+    results = await asyncio.gather(*coroutines_list)
+
+    # results = await asyncio.gather(
+    #     sleep_and_print(3),
+    #     sleep_and_print(4),
+    #     sleep_and_print(5),
+    #     sleep_and_print(6))
     print(results)
 
 
