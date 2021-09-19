@@ -1,3 +1,7 @@
+from datetime import datetime
+from pprint import pprint
+
+import click
 import requests
 
 urls = [
@@ -20,5 +24,6 @@ def get_args(url):
     return requests.get(url).json()['args']
 
 
-if __name__ == '__main__':
-    pass
+start = datetime.now()
+pprint([get_args(url) for url in urls])
+click.secho(f'{datetime.now() - start}', bold=True, bg='blue', fg='white')
