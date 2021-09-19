@@ -1,16 +1,24 @@
-# This is a sample Python script.
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+urls = [
+    "http://httpbin.org/get?text=python",
+    "http://httpbin.org/get?text=is",
+    "http://httpbin.org/get?text=fun",
+    "http://httpbin.org/get?text=and",
+    "http://httpbin.org/get?text=useful",
+    "http://httpbin.org/get?text=you",
+    "http://httpbin.org/get?text=can",
+    "http://httpbin.org/get?text=almost",
+    "http://httpbin.org/get?text=do",
+    "http://httpbin.org/get?text=anything",
+    "http://httpbin.org/get?text=with",
+    "http://httpbin.org/get?text=it",
+]  # 12 requests
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def get_args(url):
+    return requests.get(url).json()['args']
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    pass
