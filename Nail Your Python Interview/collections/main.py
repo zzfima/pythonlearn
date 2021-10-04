@@ -1,3 +1,5 @@
+import this
+
 if __name__ == '__main__':
     # ordered
     t1 = ('a', 1, 88.4, 2)
